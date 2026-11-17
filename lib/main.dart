@@ -41,7 +41,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   late final AudioPlayer player;
 
-  @override
+
+   @override
   void initState() {
     player = AudioPlayer();
     super.initState();
@@ -54,29 +55,42 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {    
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(        
         title: Text(widget.title),
       ),
-      body: Column(
+      body: Column(        
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Expanded(
-            child: InkWell(
-              onTap: () async {
-                await player.play(AssetSource("note1.mp3"));
-              },
-              child: Container(
-                color: Colors.red,
-              ),
-            ),
-          ),
-          Expanded(child: Container(color: Colors.orange)),
+        
+          Container(
+            color: Colors.red,
+            width: 50,
+            height: 50
+           ),
+        
+
+          Container(
+            color: Colors.orange,
+            width: 50,
+            height: 50
+           ),
+
+
+
+
+
+          
+
         ],
       ),
+      
     );
   }
+
+
+
 }
 
 //onTap:() async{ await player.play(AssetSource("note1.mp3"));},
